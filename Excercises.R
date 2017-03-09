@@ -64,10 +64,12 @@ mean(unlist(son.71))
 #3
 #Which cannot be written as a linear model?
 #D) Y = a + bt + ct^2 + dt^3 + e
+#WRONG - ANSWER IS C
 
 #4 
 #Which best describes what e represents?
 #D) Between individual variability: people of the same height vary in their weight.
+#MEASUREMENT ERROR
 
 #Matrix Notation
 
@@ -211,15 +213,15 @@ solve(X)%*%y
 #B) X %*% matrix(1,ncol(X))
 
 #2 Solve the system of equations for c:
-X <- matrix(c(3,2,1,5,4,2,-1,0,5,2,5,0,1,-1,-5,1),4,4)
+X <- matrix(c(3,2,1,5,4,2,-1,0,-5,2,5,0,1,-1,-5,1),4,4)
 y <- matrix(c(10,5,7,4),4,1)
-solve(X,y)
+solve(X)%*%y
 #[,1]
-#[1,]  0.8247012
-#[2,]  0.4183267
-#[3,]  1.1952191
-#[4,] -0.1235060
-#c = 1.1952191
+#[1,]  1.2477876
+#[2,]  1.0176991
+#[3,] -0.8849558
+#[4,] -2.2389381
+#c = -0.8849558
 
 #3 Load the following matrices into R:
 a <- matrix(1:12, nrow=4)
